@@ -1,4 +1,247 @@
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  background-color: rgb(252, 252, 252);
 }
 
+.App {
+  width: 100%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 0% 2%;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  box-shadow: 2px 2px 8px rgb(194, 194, 194);
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  margin-right: 0;
+  text-align: right;
+  gap: 160px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+nav .routing {
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  font-weight: 400;
+  font-size: 19px;
+}
+
+nav .activated {
+  color: black;
+}
+
+h1 {
+  color: rgb(0, 202, 202);
+  margin-left: 10%;
+}
+
+h2 {
+  color: black;
+}
+
+.active-link {
+  border-bottom: 2px solid red;
+}
+
+.homeContent {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0% 7%;
+}
+
+.book-list-item {
+  border: 1px solid rgb(233, 233, 233);
+  margin-top: 25px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  border-radius: 6px;
+  padding: 1% 0%;
+}
+
+.list-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-category {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(131, 131, 131);
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.book-title {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(31, 31, 31);
+  font-size: 20px;
+  margin: 2px 0;
+}
+
+.book-author {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(26, 206, 230);
+  font-size: 17px;
+  margin: 0 0;
+}
+
+.list-detail-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.list-detail-buttons button {
+  border: none;
+  color: rgb(26, 206, 230);
+  text-transform: uppercase;
+  background-color: white;
+  font-size: 15px;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-right: 1px solid rgb(184, 184, 184);
+  padding: 0% 10%;
+}
+
+.image-spina {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+}
+
+.percentage h2 {
+  margin: 0%;
+  font-size: 35px;
+}
+
+.percentage h3 {
+  margin: 0%;
+  font-weight: lighter;
+  color: grey;
+  font-size: 19px;
+}
+
+.last h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: grey;
+  font-size: 17px;
+  padding-bottom: 2%;
+}
+
+.last h3 {
+  margin: 0;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.last button {
+  background-color: rgb(8, 154, 238);
+  border: none;
+  color: white;
+  padding: 3% 3%;
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-radius: 3px;
+}
+
+.formSections {
+  border-top: 1px solid rgb(206, 206, 206);
+  margin-top: 4%;
+  padding-top: 4%;
+  margin-bottom: 25%;
+}
+
+.add-new {
+  color: grey;
+  font-weight: bold;
+}
+
+.FormContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 4%;
+}
+
+.FormContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.FormContainer form input {
+  width: 48%;
+  margin-right: 4%;
+  border: 1px solid rgb(235, 235, 235);
+  font-size: 17px;
+  padding-left: 15px;
+  height: 30px;
+}
+
+.FormContainer form select {
+  width: 29%;
+  margin-right: 2%;
+  padding-left: 10px;
+  height: 36px;
+  border: 1px solid rgb(235, 235, 235);
+  font-size: 17px;
+  margin-top: -1px;
+}
+
+.FormContainer form button {
+  height: 36px;
+  padding: 0% 4.6%;
+  background-color: rgb(8, 154, 238);
+  border: none;
+  color: white;
+}
+
+.userImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 160px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid grey;
+  align-self: center;
+  position: absolute;
+  top: 20%;
+  left: 88%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userImage i {
+  color: rgb(8, 154, 238);
+  font-size: 20px;
+}
