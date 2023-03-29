@@ -89,10 +89,12 @@ h2 {
   color: rgb(31, 31, 31);
   font-size: 20px;
   margin: 2px 0;
+  text-transform: capitalize;
 }
 
 .book-author {
   font-weight: bold;
+  text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
   color: rgb(26, 206, 230);
   font-size: 17px;
@@ -198,8 +200,8 @@ h2 {
   align-items: center;
 }
 
-.FormContainer form input {
-  width: 48%;
+.FormContainer form .AddBook {
+  width: 45%;
   margin-right: 4%;
   border: 1px solid rgb(235, 235, 235);
   font-size: 17px;
@@ -207,7 +209,7 @@ h2 {
   height: 30px;
 }
 
-.FormContainer form select {
+.FormContainer form .Author {
   width: 29%;
   margin-right: 2%;
   padding-left: 10px;
@@ -215,6 +217,15 @@ h2 {
   border: 1px solid rgb(235, 235, 235);
   font-size: 17px;
   margin-top: -1px;
+}
+
+.statusB button {
+  background-color: rgb(8, 154, 238);
+  font-size: 25px;
+  padding: 1% 6%;
+  color: white;
+  border: none;
+  border-radius: 3px;
 }
 
 .FormContainer form button {
@@ -244,4 +255,12 @@ h2 {
 .userImage i {
   color: rgb(8, 154, 238);
   font-size: 20px;
+}
+
+.statusB {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }

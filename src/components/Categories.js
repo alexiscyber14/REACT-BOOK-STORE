@@ -4,7 +4,9 @@ import '../spinner.png';
 
 const Categories = () => (
   <div className="homeContent">
-    <h4>empty for now</h4>
+    <div className="statusB">
+      <button type="button">Check status</button>
+    </div>
   </div>
 
 );
