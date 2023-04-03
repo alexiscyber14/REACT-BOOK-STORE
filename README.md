@@ -71,9 +71,14 @@ Contributions, issues, and feature requests are welcome!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## KEY FEATURES
-- Perform math operations in the app
-- Discover math quotes in the app
-- 
+- Add books to the list
+- Remove and edit a book
+- Track reading progress
+
+## FUTURE FEATURES
+- Added items stay in the browser
+- Use API to store input data
+- Delete items from API server Side
 
 ## ⭐️ Show your support <a name="support"></a>
 
