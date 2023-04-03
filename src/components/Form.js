@@ -26,18 +26,6 @@ const Form = () => {
     }
   }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const title = event.target.elements.title.value;
-    const author = event.target.elements.author.value;
-    const newBook = { title, author };
-    const storedBookList = JSON.parse(localStorage.getItem('bookList'));
-    const updatedBookList = storedBookList ? [...storedBookList, newBook] : [newBook];
-    localStorage.setItem('bookList', JSON.stringify(updatedBookList));
-    setBookList(updatedBookList);
-    event.target.reset();
-  };
-
   const handleRemove = (index) => {
     const storedBookList = JSON.parse(localStorage.getItem('bookList'));
     const updatedBookList = storedBookList.filter((_, i) => i !== index);
@@ -73,16 +61,6 @@ const Form = () => {
             </div>
           </li>
         ))}
-      </div>
-      <div className="formSections">
-        <h2 className="add-new">ADD NEW BOOK</h2>
-        <div className="FormContainer">
-          <form onSubmit={handleSubmit}>
-            <input placeholder="Book title" className="AddBook" name="title" type="text" />
-            <input placeholder="Author" type="text" className="Author" name="author" />
-            <button type="submit">ADD BOOK</button>
-          </form>
-        </div>
       </div>
     </div>
   );
