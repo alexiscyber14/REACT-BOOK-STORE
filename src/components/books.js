@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook, addBook } from '../redux/books/bookSlice';
+import { fetchBooks, addBook, removeBook } from '../redux/books/bookSlice';
 import Spina from '../spinner.png';
 
 const ParaStyles = {
@@ -18,25 +18,37 @@ const ParaStyles3 = {
 };
 
 const BookList = () => {
-  const books = useSelector((state) => state.book);
+  const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (books.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   const handleAddBook = (event) => {
     event.preventDefault();
-    const item_id = `item${books.length + 1}`;
-    const category = 'Fiction'; // hardcoded for example
     dispatch(addBook({
-      item_id, title, author, category,
-    }));
-    setTitle('');
-    setAuthor('');
+      title,
+      author,
+      category,
+    })).then(() => {
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+      window.location.reload();
+    });
   };
 
-  const handleRemoveBook = (id) => {
-    dispatch(removeBook(id));
+  const handleRemoveBook = (item_id) => {
+    dispatch(removeBook({ item_id }));
   };
 
   return (
@@ -49,7 +61,7 @@ const BookList = () => {
               <h2 className="book-title">{book.title}</h2>
               <h3 className="book-author">{book.author}</h3>
               <div className="list-detail-buttons">
-                <button type="button" style={ParaStyles2}>Comments</button>
+                <button type="button" style={ParaStyles2}>comments</button>
                 <button type="button" className="m-button" style={ParaStyles} onClick={() => handleRemoveBook(book.item_id)}>Remove</button>
                 <button type="button" style={ParaStyles3}>Edit</button>
               </div>
@@ -68,7 +80,6 @@ const BookList = () => {
             </div>
           </li>
         ))}
-        ;
       </div>
       <div className="formSections">
         <h2 className="add-new">ADD NEW BOOK</h2>
@@ -76,6 +87,16 @@ const BookList = () => {
           <form onSubmit={handleAddBook}>
             <input placeholder="Book title" className="AddBook" name="title" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
             <input placeholder="Author" type="text" className="Author" name="author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+            <select id="category" name="category" required value={category} onChange={(e) => setCategory(e.target.value)}>
+              <option value="">--Please choose category--</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Nonfiction">Nonfiction</option>
+              <option value="Science Fiction">Science Fiction</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Romance">Romance</option>
+              <option value="Crime">Crime</option>
+            </select>
             <button type="submit">ADD BOOK</button>
           </form>
         </div>
