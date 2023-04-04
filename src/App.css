@@ -1,6 +1,6 @@
 
 body {
-  margin: 0;
+  margin: 5%;
   background-color: rgb(252, 252, 252);
 }
 
@@ -50,6 +50,13 @@ h2 {
 
 .active-link {
   border-bottom: 2px solid red;
+}
+
+.main{
+  background-color: rgba(247, 247, 247, 0.966);
+  margin-top: -25px;
+  padding-top: 4%;
+  padding-bottom: 1%;
 }
 
 .homeContent {
@@ -201,16 +208,26 @@ h2 {
 }
 
 .FormContainer form .AddBook {
-  width: 45%;
-  margin-right: 4%;
+  width: 30%;
+  margin-right: 1%;
   border: 1px solid rgb(235, 235, 235);
   font-size: 17px;
   padding-left: 15px;
-  height: 30px;
+  height: 36px;
 }
 
 .FormContainer form .Author {
   width: 29%;
+  margin-right: 2%;
+  padding-left: 10px;
+  height: 36px;
+  border: 1px solid rgb(235, 235, 235);
+  font-size: 17px;
+  margin-top: -1px;
+}
+
+#category {
+  width: 13%;
   margin-right: 2%;
   padding-left: 10px;
   height: 36px;
@@ -258,9 +275,17 @@ h2 {
 }
 
 .statusB {
-  margin-top: 5%;
+  margin-top: 1%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  align-items: left;
+  height: auto;
+  background-color:white;
+
+}
+
+.statusB h2{
+  text-align: left;
+  margin-left: 3%;
+  padding-bottom: 15%;
 }

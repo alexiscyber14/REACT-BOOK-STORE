@@ -5,9 +5,11 @@ import Form from './Form';
 import BookList from './books';
 
 const Home = () => (
-  <div className="homeContent">
-    <BookList />
-    <Form />
+  <div className="main">
+    <div className="homeContent">
+      <BookList />
+      <Form />
+    </div>
   </div>
 );
 export default Home;
