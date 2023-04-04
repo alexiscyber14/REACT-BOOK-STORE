@@ -20,6 +20,7 @@
       "import/no-unresolved": "off",
       "no-shadow": "off",
       "camelcase": 0,
+      "no-param-reassign": 0,
       "react/prop-types": "off",
       "react/no-array-index-key":"off",
       "import/prefer-default-export": "off"
