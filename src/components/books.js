@@ -88,7 +88,7 @@ const BookList = () => {
             <input placeholder="Book title" className="AddBook" name="title" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
             <input placeholder="Author" type="text" className="Author" name="author" value={author} onChange={(e) => setAuthor(e.target.value)} />
             <select id="category" name="category" required value={category} onChange={(e) => setCategory(e.target.value)}>
-              <option value="">--Please choose category--</option>
+              <option value="">category</option>
               <option value="Fiction">Fiction</option>
               <option value="Nonfiction">Nonfiction</option>
               <option value="Science Fiction">Science Fiction</option>
